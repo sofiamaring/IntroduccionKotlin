@@ -1,5 +1,8 @@
 package Intro
 
+import kotlin.math.pow
+import kotlin.math.sqrt
+
 class reto_1 {
     fun main() {
 
@@ -9,7 +12,9 @@ class reto_1 {
             println("2. Resta")
             println("3. Multiplicación")
             println("4. División")
-            println("5. Salir")
+            println("5. Potencia")
+            println("6. Raiz")
+            println("7. Salir")
 
             val opcion = readLine()?.toIntOrNull()
 
@@ -18,7 +23,9 @@ class reto_1 {
                 2 -> restar()
                 3 -> multiplicar()
                 4 -> dividir()
-                5 -> {
+                5 -> potencia()
+                6 -> raiz()
+                7 -> {
                     return
                 }
                 else -> println("Opción no válida. Por favor, seleccione una opción del 1 al 5.")
@@ -86,4 +93,31 @@ class reto_1 {
         }
     }
 
+    fun potencia() {
+        println("Ingrese el número base:")
+        val base = readLine()?.toDoubleOrNull()
+
+        println("Ingrese la potencia:")
+        val exponente = readLine()?.toDoubleOrNull()
+
+        if (base != null && exponente != null) {
+            val resultado = base.pow(exponente)
+            println("El resultado de elevar $base a la potencia $exponente es: $resultado")
+        } else {
+            println("Por favor, ingrese números válidos.")
+        }
+    }
+
+    fun raiz() {
+        println("Ingrese un número:")
+        val numero = readLine()?.toDoubleOrNull()
+
+        if (numero != null && numero >= 0) {
+            val raizCuadrada = sqrt(numero)
+            println("La raíz cuadrada de $numero es: $raizCuadrada")
+        } else {
+            println("Por favor, ingrese un número válido y positivo.")
+        }
+
+    }
 }
