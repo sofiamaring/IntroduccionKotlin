@@ -2,7 +2,6 @@ package Intro
 
 class reto_1 {
     fun main() {
-        println("Bienvenido a la calculadora básica en Kotlin!")
 
         while (true) {
             println("Por favor, seleccione una operación:")
@@ -20,7 +19,6 @@ class reto_1 {
                 3 -> multiplicar()
                 4 -> dividir()
                 5 -> {
-                    println("Gracias por usar la calculadora. ¡Hasta luego!")
                     return
                 }
                 else -> println("Opción no válida. Por favor, seleccione una opción del 1 al 5.")
