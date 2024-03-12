@@ -1,27 +1,26 @@
-package Intro.POO
+package POO
 
-class persona {
+class Persona {
     /*atributos*/
-    private var nombre: String
+    var nombre: String = "None"
         get() {
             TODO()
         }
         set(value) {}
-    var edad: Int
+    var edad: Int = 0
         get() {
             TODO()
         }
         set(value){}
-    var estatura: Double
+    var estatura: Double = 0.0
         get() {
             TODO()
         }
         set(value) {}
-    var sexo: Boolean
+    var sexo: Boolean = true
         get() {
             TODO()
         }
-        set(value) {}
     constructor()
     /*constructor (estatura: Double, seco: Boolean, edad: Int, nombre: String) {
         this.estatura = estatura
@@ -32,12 +31,14 @@ class persona {
 
     fun pedirDatos(){
         println()("por favor ingrese su nombre")
-        this.nombre
+        this.nombre = readLine()
         println("Por favor ingrese su edad")
-        this.edad
+        this.edad = readLine().toInt()
     }
 }
 
-    fun main(){
-        val
-    }
+fun main(){
+    val person1=Persona()
+    person1.pedirDatos()
+    person1.edad=10
+}
